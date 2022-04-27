@@ -76,3 +76,9 @@ with open("pilotak.csv","r",encoding="utf-8") as f:
 #3
 
 print(f"3.3 feladat: {len(lista)}")
+
+#4
+
+pilotak = [sor.nev for sor in lista][-1]
+
+print(f"3.4 feladat: {pilotak}")
