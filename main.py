@@ -72,3 +72,7 @@ class Pilotak:
 with open("pilotak.csv","r",encoding="utf-8") as f:
   f.readline()
   lista = [Pilotak(sor) for sor in f]
+
+#3
+
+print(f"3.3 feladat: {len(lista)}")
