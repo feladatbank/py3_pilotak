@@ -54,3 +54,21 @@ született. Írja ki a minta szerint a pilóták születési dátumát is!
 __________________________________________________
 
 """
+
+#név;születési_dátum;nemzetiség;rajtszám
+#Lewis Hamilton;1985.01.07;brit;44
+#Nick Heidfeld;1977.05.10;német;
+
+#1-2
+
+class Pilotak:
+  def __init__(self,sor):
+    nev,szuletes,nemzetiseg,rajtszam = sor.strip().split(";")
+    self.nev = nev
+    self.szuletes = szuletes
+    self.nemzetiseg = nemzetiseg
+    self.rajtszam = rajtszam
+
+with open("pilotak.csv","r",encoding="utf-8") as f:
+  f.readline()
+  lista = [Pilotak(sor) for sor in f]
