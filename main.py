@@ -68,6 +68,7 @@ class Pilotak:
     self.szuletes = szuletes
     self.nemzetiseg = nemzetiseg
     self.rajtszam = rajtszam
+    self.ev = int(szuletes[0:4])
 
 with open("pilotak.csv","r",encoding="utf-8") as f:
   f.readline()
@@ -82,3 +83,10 @@ print(f"3.3 feladat: {len(lista)}")
 pilotak = [sor.nev for sor in lista][-1]
 
 print(f"3.4 feladat: {pilotak}")
+
+#5(azaz 1901. január 1-je előtt)
+
+kereso = [sor for sor in lista if sor.ev < 1901]
+print("3.5 feladat")
+[print(f"       {sor.nev} ({sor.szuletes})") for sor in kereso]
+
